@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1">
+    <catalogsearch_ajax_suggest>
+        <block type="atwixsearch/autocomplete" name="root" output="toHtml" template="atwix/advancedsearch.phtml"/>
+    </catalogsearch_ajax_suggest>
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/atwix/search.css</stylesheet></action>
+            <action method="addJs"><script>atwix/jquery-1.6.2.min.js</script></action>
+            <action method="addJs"><script>atwix/search.js</script></action>
+        </reference>
+        <reference name="footer">
+            <block type="core/template" name="atwix.search" template="atwix/js/path.phtml"/>
+        </reference>
+    </default>
+</layout>

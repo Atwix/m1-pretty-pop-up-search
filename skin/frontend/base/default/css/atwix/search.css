@@ -1,0 +1,28 @@
+.search-popup {
+    background: #fff;
+}
+.search-image {
+    margin-right: 5px;
+}
+.search-name {
+    width: 150px;
+    white-space: pre-wrap;
+    font-weight: bold;
+}
+.search-popup .asearch-more {
+    display: inline !important;
+    float: right;
+}
+.search-popup li {
+    border-bottom: 1px solid #d3d3d3 !important;
+}
+.search-popup a {
+    display: block !important;
+}
+
+#search_autocomplete {
+    position: absolute;
+    left: 40px;
+    top: 22px;
+    width: 215px;
+}

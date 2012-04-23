@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Atwix_AdvancedSearch>
+            <version>0.0.1</version>
+        </Atwix_AdvancedSearch>
+    </modules>
+    <frontend>
+       <routers>
+            <atwixsearch>
+                <use>standard</use>
+                <args>
+                    <module>Atwix_AdvancedSearch</module>
+                    <frontName>atwixsearch</frontName>
+                </args>
+            </atwixsearch>
+            <catalogsearch>
+                <args>
+                    <modules>
+                         <Atwix_AdvancedSearch before="Mage_CatalogSearch">Atwix_AdvancedSearch</Atwix_AdvancedSearch>
+                    </modules>
+                </args>
+            </catalogsearch>
+       </routers>
+       <layout>
+            <updates>
+                <atwixsearch>
+                    <file>atwix_search.xml</file>
+                </atwixsearch>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <atwixsearch>
+                <class>Atwix_AdvancedSearch_Block</class>
+            </atwixsearch>
+        </blocks>
+    </global>
+</config>

@@ -1,0 +1,25 @@
+<div class="search-popup">
+    <ul>
+    <?php foreach ($this->getSuggestData() as $index => $item): ?>
+            <li title="<?php echo $this->htmlEscape($item['sku']) ?>" class="col2-set">
+                <div class="left search-image">
+                    <a href="<?php echo $item['url'] ?>"><img src="<?php echo $item['thumbnail'] ?>"/></a>
+                </div>
+                <div class="wide left">
+                    <div class="search-name"><a href="<?php echo $item['url'] ?>"><?php echo $item['name'] ?></a></div>
+                    <?php //echo $this->htmlEscape($item['sku']) ?>
+                    <?php echo $item['price'] ?>
+                    <?php echo $item['review'] ?>
+                    <?php if (!empty($item['images'])): ?>
+                        <div>
+                            <?php foreach ($item['images'] as $image): ?>
+                                <img src="<?php echo $image ?>"/>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </li>
+    <?php endforeach; ?>
+    <li title="<?php echo $this->__('More Products') ?>"><a class="asearch-more" href="<?php echo $this->getUrl("catalogsearch/result/")."?q=".$this->helper('catalogsearch')->getQueryText() ?>" onmouseover="return false;"><?php echo $this->__('More Products') ?></a></li>
+    </ul>
+</div>
