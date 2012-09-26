@@ -6,7 +6,6 @@
     <default>
         <reference name="head">
             <action method="addCss"><stylesheet>css/atwix/search.css</stylesheet></action>
-            <action method="addJs"><script>atwix/jquery-1.6.2.min.js</script></action>
             <action method="addJs"><script>atwix/search.js</script></action>
         </reference>
         <reference name="footer">
