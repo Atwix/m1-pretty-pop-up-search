@@ -2,5 +2,5 @@
 
 This extension replaces old magento search popup to the new one that looks much better
 
-**Instalation:**
+**Installation:**
 Just move files to Magento root dir
